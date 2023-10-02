@@ -1,0 +1,36 @@
+<mvc:View xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" controllerName="invoice.invoiceprueba.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Button id="boton" text="boton de prueba"></Button>
+           <Text id = "texto1" text="texto de prueba" ></Text>
+           
+           <List id="foodList" items="{/foods}">
+            <StandardListItem id = "standarlist" title="{name}" description="{description}" />
+          </List>
+            <!-- esto es un br -->
+          <Text id = "textodeoruevba3" text=" " ></Text>
+          
+          <Table id="exerciseTable" items="{/exercises}">
+            <columns>
+              <Column id="nameColumna">
+                <Text id ="textEjercicio" text="Ejercicio" />
+              </Column>
+              <Column id="descripcionColumna">
+                <Text id="textDescripcion" text="Descripcion" />
+              </Column>
+            </columns>
+            <items>
+              <ColumnListItem id="columnListItem">
+                <cells>
+                  <Text id="textDatoName" text="{name}" />
+                  <Text id="textDatoDescription" text="{description}" />
+                </cells>
+              </ColumnListItem>
+            </items>
+          </Table>
+
+        </content>
+    </Page>
+</mvc:View>
